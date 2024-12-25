@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Management</title>
+  </head>
+  <body>
+    <h1>Welcome to the Account Management System</h1>
+    <a href="/view">View All Accounts</a><br />
+    <a href="/search">Search Accounts</a><br />
+
+    <h2>Add Account</h2>
+    <form method="POST" action="/add">
+      Name: <input type="text" name="name" /><br />
+      Username/Email: <input type="text" name="user" /><br />
+      Password: <input type="text" name="password" /><br />
+      Category: <input type="text" name="category" /><br />
+      Date: <input type="text" name="cdate" /><br />
+      <input type="submit" value="Add Account" />
+    </form>
+  </body>
+</html>

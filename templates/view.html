@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Accounts</title>
+  </head>
+  <body>
+    <h2>All Accounts</h2>
+    <ul>
+      {% for row in rows %}
+      <li>{{ row }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+  </body>
+</html>
