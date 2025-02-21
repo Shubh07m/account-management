@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>View Accounts</title>
+    <title>Admin Actions</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
     <style>
         body {
@@ -11,7 +11,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: auto;
             background: #007bff; /* Blue background */
             padding: 20px;
@@ -19,7 +19,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: white; /* White text for better visibility */
         }
-        h2 {
+        h1 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -28,35 +28,42 @@
             padding: 0; /* Remove padding */
         }
         li {
-            background: rgba(255, 255, 255, 0.1); /* Light background for list items */
             margin: 10px 0; /* Space between list items */
-            padding: 10px; /* Padding for list items */
-            border-radius: 5px; /* Rounded corners */
         }
         a {
             display: block;
             text-align: center;
-            margin-top: 20px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #28a745; /* Green background for links */
             color: white;
             text-decoration: none;
-            background: #28a745; /* Green for back button */
-            padding: 10px;
             border-radius: 5px;
+            transition: background 0.3s;
         }
         a:hover {
             background: #218838; /* Darker green on hover */
+        }
+        .back-link {
+            background: #007bff; /* Blue background for back link */
+        }
+        .back-link:hover {
+            background: #0056b3; /* Darker blue on hover */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>All Accounts</h2>
+        <h1>Admin Actions</h1>
         <ul>
-            {% for row in rows %}
-            <li>{{ row }}</li>
-            {% endfor %}
+            <li><a href="/view">View All Accounts</a></li>
+            <li><a href="/search">Search Accounts</a></li>
+            <li><a href="/add">Add Accounts</a></li>
+            <li><a href="/update">Update Account</a></li>
+            <li><a href="/delete">Delete Account</a></li>
+            <!-- Add more admin actions as needed -->
         </ul>
-        <a href="/">Back to Home</a>
+        <a class="back-link" href="/">Back to Home</a>
     </div>
 </body>
 </html>

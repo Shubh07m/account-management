@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background: #0056b3;
+}
+h1 {
+    color: #fff; /* White color for better visibility */
+    text-align: center;
+    font-size: 3em; /* Increase font size */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
+    transition: transform 0.3s, color 0.3s; /* Transition for effects */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #47b1ee; /* Change color on hover */
+}
+
+h2 {
+    color: #f0f0f0; /* Light gray color */
+    text-align: center;
+    font-size: 2em; /* Increase font size */
+    margin-bottom: 15px; /* Space below the heading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    transition: transform 0.3s, color 0.3s; /* Transition for effects */
+}
+
+h2:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+    color: #27b4d7; /* Change color on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJsdXUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTYzMzY5NzY5Nw&ixlib=rb-1.2.1&q=80&w=1080'); /* Online blue background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 20px;
+    color: #fff; /* Change text color for better visibility */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

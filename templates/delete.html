@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Accounts</title>
+    <title>Delete Account</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
     <style>
         body {
@@ -19,7 +19,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: white; /* White text for better visibility */
         }
-        h2 {
+        h1 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -27,7 +27,6 @@
             display: block;
             margin: 10px 0 5px;
         }
-        select,
         input[type="text"] {
             width: 100%; /* Full width inputs */
             padding: 10px;
@@ -64,20 +63,11 @@
 </head>
 <body>
     <div class="container">
-        <h2>Search Account</h2>
-        <form method="POST" action="/search">
-            <label for="search_type">Search By:</label>
-            <select name="search_type" required>
-                <option value="name">Name</option>
-                <option value="user">Username/Email</option>
-                <option value="password">Password</option>
-                <option value="category">Category</option>
-            </select>
-            <br />
-            <label for="search_value">Value:</label>
-            <input type="text" name="search_value" required />
-            <br />
-            <input type="submit" value="Search" />
+        <h1>Delete Account</h1>
+        <form method="POST" action="/delete">
+            <label for="id">Account ID:</label>
+            <input type="text" name="id" required autocomplete="off" /><br />
+            <input type="submit" value="Delete Account" />
         </form>
         <a href="/">Back to Home</a>
     </div>

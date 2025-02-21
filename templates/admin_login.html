@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Accounts</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
     <style>
         body {
@@ -19,7 +19,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             color: white; /* White text for better visibility */
         }
-        h2 {
+        h1 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -27,8 +27,7 @@
             display: block;
             margin: 10px 0 5px;
         }
-        select,
-        input[type="text"] {
+        input[type="password"] {
             width: 100%; /* Full width inputs */
             padding: 10px;
             margin-bottom: 15px;
@@ -64,22 +63,25 @@
 </head>
 <body>
     <div class="container">
-        <h2>Search Account</h2>
-        <form method="POST" action="/search">
-            <label for="search_type">Search By:</label>
-            <select name="search_type" required>
-                <option value="name">Name</option>
-                <option value="user">Username/Email</option>
-                <option value="password">Password</option>
-                <option value="category">Category</option>
-            </select>
-            <br />
-            <label for="search_value">Value:</label>
-            <input type="text" name="search_value" required />
-            <br />
-            <input type="submit" value="Search" />
+        <h1>Admin Login</h1>
+        <form method="POST" action="/admin_login">
+            <label for="password">Password:</label>
+            <input type="password" name="password" required id="password" autocomplete="off" />
+            <input type="checkbox" onclick="togglePassword()"> Show Password
+            <input type="submit" value="Login" />
         </form>
         <a href="/">Back to Home</a>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>

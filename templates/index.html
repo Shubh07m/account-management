@@ -1,21 +1,93 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <style></style>
+    <title>Account Management</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Account Management System</h1>
+        <h2>Manage Your Accounts Easily</h2>
+        <a href="/view">View All Accounts</a>
+        <a href="/search">Search Accounts</a>
+        <a href="/add">Add Accounts</a>
+
+
+    </div>
+</body>
+</html>-->
+
+
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJsdXUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTYzMzY5NzY5Nw&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .section a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .section a:hover {
+            background: #0056b3;
+        }
+    </style>
     <title>Account Management</title>
-  </head>
-  <body>
-    <h1>Welcome to the Account Management System</h1>
-    <a href="/view">View All Accounts</a><br />
-    <a href="/search">Search Accounts</a><br />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    />
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Account Management System</h1>
+        <h2>Manage Your Accounts Easily</h2>
 
-    <h2>Add Account</h2>
-    <form method="POST" action="/add">
-      Name: <input type="text" name="name" /><br />
-      Username/Email: <input type="text" name="user" /><br />
-      Password: <input type="text" name="password" /><br />
-      Category: <input type="text" name="category" /><br />
-      Date: <input type="text" name="cdate" /><br />
-      <input type="submit" value="Add Account" />
-    </form>
-  </body>
+        <!-- Admin Section -->
+        <div class="section" id="admin">
+            <h2>Admin Actions</h2>
+            <a href="/admin_login">Admin Login</a> <!-- Link to Admin Login -->
+        </div>
+        <!-- Normal User Section -->
+        <div class="section" id="normal-user">
+            <h2>User Actions</h2>
+            <a href="/add">Add Accounts</a>
+            <a href="/update">Update Account</a>
+        </div>
+    </div>
+</body>
 </html>
+
